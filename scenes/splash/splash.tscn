@@ -1,10 +1,44 @@
-[gd_scene format=3 uid="uid://dbxxfbwssx73m"]
+[gd_scene load_steps=2 format=3 uid="uid://dbxxfbwssx73m"]
 
-[node name="Splash" type="Node2D"]
+[ext_resource type="Script" path="res://scenes/splash/splash.gd" id="1_yug3l"]
+
+[node name="Splash" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yug3l")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = 620.0
-offset_top = 333.0
-offset_right = 734.0
-offset_bottom = 372.0
-text = "Splash screen"
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -136.0
+offset_top = -19.0
+offset_right = 136.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]Splash screen[/center]"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -136.0
+offset_top = 29.0
+offset_right = 136.0
+offset_bottom = 56.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]Pressione ESPAÇO para ir ao menu[/center]"

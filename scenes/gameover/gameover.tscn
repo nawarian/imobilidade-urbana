@@ -1,4 +1,17 @@
-[gd_scene format=3 uid="uid://cgiit67wf2dyw"]
+[gd_scene load_steps=2 format=3 uid="uid://cgiit67wf2dyw"]
+
+[sub_resource type="GDScript" id="GDScript_ile68"]
+script/source = "extends Control
+
+@onready var menu_scene: PackedScene = preload(\"res://scenes/mainmenu/mainmenu.tscn\")
+
+func _process(delta):
+	if Input.is_action_just_released(\"ui_accept\"):
+		if not menu_scene.can_instantiate():
+			menu_scene = load(\"res://scenes/mainmenu/mainmenu.tscn\")
+
+		SceneManager.change_to(menu_scene)
+"
 
 [node name="Gameover" type="Control"]
 layout_mode = 3
@@ -7,6 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = SubResource("GDScript_ile68")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 layout_mode = 1
@@ -23,3 +37,19 @@ grow_horizontal = 2
 grow_vertical = 2
 bbcode_enabled = true
 text = "[center]Gameover[/center]"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.0
+offset_top = 20.0
+offset_right = 96.0
+offset_bottom = 72.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]Pressione ESPAÇO para voltar ao menu[/center]"

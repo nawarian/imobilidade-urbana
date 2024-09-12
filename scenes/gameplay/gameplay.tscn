@@ -1,4 +1,20 @@
-[gd_scene format=3 uid="uid://bkhs6kpf2s6f1"]
+[gd_scene load_steps=2 format=3 uid="uid://bkhs6kpf2s6f1"]
+
+[sub_resource type="GDScript" id="GDScript_t226l"]
+script/source = "extends Control
+
+@onready var gameover_scene: PackedScene = preload(\"res://scenes/gameover/gameover.tscn\")
+@onready var jumpscare_scene: PackedScene = preload(\"res://scenes/jumpscare/jumpscare.tscn\")
+@onready var outro_scene: PackedScene = preload(\"res://scenes/outro/outro.tscn\")
+
+func _process(delta):
+	if Input.is_action_just_released(\"ui_left\"):
+		SceneManager.change_to(gameover_scene)
+	if Input.is_action_just_released(\"ui_up\"):
+		SceneManager.change_to(jumpscare_scene)
+	if Input.is_action_just_released(\"ui_right\"):
+		SceneManager.change_to(outro_scene)
+"
 
 [node name="Gameplay" type="Control"]
 layout_mode = 3
@@ -7,6 +23,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = SubResource("GDScript_t226l")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 layout_mode = 1
@@ -23,3 +40,51 @@ grow_horizontal = 2
 grow_vertical = 2
 bbcode_enabled = true
 text = "[center]Gameplay[/center]"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -328.0
+offset_top = 28.0
+offset_right = -152.0
+offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]Pressione LEFT para gameover[/center]"
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -88.0
+offset_top = 28.0
+offset_right = 88.0
+offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]Pressione UP para jumpscare[/center]"
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 144.0
+offset_top = 28.0
+offset_right = 320.0
+offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]Pressione RIGHT para outro[/center]"
