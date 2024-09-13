@@ -1,0 +1,58 @@
+name: Production release to itch.io
+
+on:
+  push:
+    branches: ["main"]
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: nawarian/godot:4.3-stable
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build web
+        env:
+          HOME: /root
+        run: |
+          mkdir build/
+          godot --display-driver headless --verbose --export-debug "Web" $(pwd)/build/index.html
+
+          mv worker.min.js build/worker.min.js
+          sed -i '3 i <script src="worker.min.js"></script>' build/index.html
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          name: build
+          path: build/
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    container:
+      image: nawarian/butler:latest
+    steps:
+      - name: Download build artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: build
+
+      - name: Publish
+        env:
+          BUTLER_API_KEY: ${{ secrets.BUTLER_API_KEY }}
+        run: |
+          butler push production build
+
