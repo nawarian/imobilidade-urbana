@@ -2,6 +2,10 @@ extends Control
 
 @onready var menu_scene: PackedScene = preload("res://scenes/mainmenu/mainmenu.tscn")
 
-func _process(delta):
-	if Input.is_action_just_released("ui_accept"):
-		SceneManager.change_to(menu_scene)
+@onready var stream_player: AudioStreamPlayer2D = $AudioStreamPlayer2D
+
+func _ready():
+	stream_player.play()
+	await stream_player.finished
+	await get_tree().create_timer(0.5).timeout
+	SceneManager.change_to(menu_scene)
