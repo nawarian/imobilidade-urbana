@@ -41,7 +41,7 @@ jobs:
           mv build.zip build/artifact.zip
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-artifact@v3
         with:
           name: build
           path: build/
@@ -62,5 +62,5 @@ jobs:
           BUTLER_API_KEY: ${{ secrets.BUTLER_API_KEY }}
         run: |
           ls -lah
-          butler push build/artifact.zip nawarian/imobilidade-urbana:html5
+          /app/butler push build/artifact.zip nawarian/imobilidade-urbana:html5
 
