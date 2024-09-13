@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://djuqqrsfklqcv"
-path="res://.godot/imported/tela_fone.png-c7167f76440b1bcb436f803c05831b07.ctex"
+uid="uid://bndacbwctoji5"
+path="res://.godot/imported/logo-imobilidade-urbana.png-5f48c536323e59508f1659695aa64ef7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/title/tela_fone.png"
-dest_files=["res://.godot/imported/tela_fone.png-c7167f76440b1bcb436f803c05831b07.ctex"]
+source_file="res://scenes/mainmenu/logo-imobilidade-urbana.png"
+dest_files=["res://.godot/imported/logo-imobilidade-urbana.png-5f48c536323e59508f1659695aa64ef7.ctex"]
 
 [params]
 

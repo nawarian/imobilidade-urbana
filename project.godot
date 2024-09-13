@@ -21,6 +21,7 @@ config/icon="res://icon.svg"
 
 SceneManager="*res://scripts/scene_manager.gd"
 FadeInOut="*res://scripts/fade_in_out.gd"
+Setup="*res://scripts/setup.gd"
 
 [display]
 
@@ -29,9 +30,13 @@ window/size/viewport_height=720
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
+[gui]
+
+theme/custom_font="res://fonts/Silkscreen-Regular.ttf"
+
 [internationalization]
 
-locale/translations=PackedStringArray("res://lang/translations.csv")
+locale/translations=PackedStringArray("res://lang/translations.pt_BR.translation", "res://lang/translations.en.translation")
 
 [rendering]
 

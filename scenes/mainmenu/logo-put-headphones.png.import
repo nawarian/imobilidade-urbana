@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhihh18kqcxfe"
-path="res://.godot/imported/background.png-43bce28a8b87d05abdc038868030e84a.ctex"
+uid="uid://djuqqrsfklqcv"
+path="res://.godot/imported/logo-put-headphones.png-b375b6b13e2067b8b8c1be395f6e2081.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/title/background.png"
-dest_files=["res://.godot/imported/background.png-43bce28a8b87d05abdc038868030e84a.ctex"]
+source_file="res://scenes/mainmenu/logo-put-headphones.png"
+dest_files=["res://.godot/imported/logo-put-headphones.png-b375b6b13e2067b8b8c1be395f6e2081.ctex"]
 
 [params]
 

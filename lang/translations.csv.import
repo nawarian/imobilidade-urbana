@@ -6,12 +6,12 @@ uid="uid://gwcj2wt7t4h8"
 
 [deps]
 
-files=["res://lang/translations.Portugues.translation", "res://lang/translations.English.translation"]
+files=["res://lang/translations.pt_BR.translation", "res://lang/translations.en.translation"]
 
 source_file="res://lang/translations.csv"
-dest_files=["res://lang/translations.Portugues.translation", "res://lang/translations.English.translation"]
+dest_files=["res://lang/translations.pt_BR.translation", "res://lang/translations.en.translation"]
 
 [params]
 
 compress=true
-delimiter=1
+delimiter=0
