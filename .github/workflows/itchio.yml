@@ -2,7 +2,7 @@ name: Production release to itch.io
 
 on:
   push:
-    branches: ["main"]
+    branches: ["main", "feat_deploy_itchio"]
 
   workflow_dispatch:
 
@@ -33,12 +33,17 @@ jobs:
 
           mv worker.min.js build/worker.min.js
           sed -i '3 i <script src="worker.min.js"></script>' build/index.html
+          zip -r build.zip build/
+          rm -rf build
+          mkdir build/
+          mv build.zip build/artifact.zip
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           name: build
           path: build/
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
@@ -49,10 +54,9 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: build
-
       - name: Publish
         env:
           BUTLER_API_KEY: ${{ secrets.BUTLER_API_KEY }}
         run: |
-          butler push production build
+          butler push build/artifact.zip nawarian/imobilidade-urbana:html5
 
