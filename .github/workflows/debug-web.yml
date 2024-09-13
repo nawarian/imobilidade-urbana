@@ -37,6 +37,9 @@ jobs:
           mkdir build/
           godot --display-driver headless --verbose --export-debug "Web" $(pwd)/build/index.html
 
+          mv worker.min.js build/worker.min.js
+          sed -i '3 i <script src="worker.min.js"></script>' build/index.html
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
