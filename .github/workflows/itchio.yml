@@ -41,7 +41,7 @@ jobs:
           mv build.zip build/artifact.zip
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: build
           path: build/
@@ -53,9 +53,9 @@ jobs:
       image: nawarian/butler:latest
     steps:
       - name: Download build artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
-          path: build/
+          path: .
 
       - name: Publish
         env:
