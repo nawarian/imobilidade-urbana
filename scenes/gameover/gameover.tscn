@@ -1,17 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cgiit67wf2dyw"]
 
-[sub_resource type="GDScript" id="GDScript_ile68"]
-script/source = "extends Control
-
-@onready var menu_scene: PackedScene = preload(\"res://scenes/mainmenu/mainmenu.tscn\")
-
-func _process(delta):
-	if Input.is_action_just_released(\"ui_accept\"):
-		if not menu_scene.can_instantiate():
-			menu_scene = load(\"res://scenes/mainmenu/mainmenu.tscn\")
-
-		SceneManager.change_to(menu_scene)
-"
+[ext_resource type="Script" path="res://scenes/gameover/gameover.gd" id="1_85yfw"]
 
 [node name="Gameover" type="Control"]
 layout_mode = 3
@@ -20,7 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = SubResource("GDScript_ile68")
+script = ExtResource("1_85yfw")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 layout_mode = 1
