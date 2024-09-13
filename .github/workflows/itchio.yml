@@ -28,7 +28,7 @@ jobs:
         env:
           HOME: /root
         run: |
-          apt install -y zip
+          apt update && apt install -y zip
 
           mkdir build/
           godot --display-driver headless --verbose --export-debug "Web" $(pwd)/build/index.html
