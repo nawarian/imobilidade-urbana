@@ -20,7 +20,7 @@ func _blink(target: Node):
 	tween.tween_property(target, "modulate:a", 1, 0.1)
 	tween.tween_property(target, "modulate:a", 0.4, 0.2)
 	tween.tween_property(target, "modulate:a", 1, 0.4)
-	tween.tween_interval(1)
+	tween.tween_interval(randf() * 5)
 	tween.tween_callback(_blink.bind(target))
 	
 
