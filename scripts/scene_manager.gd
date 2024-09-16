@@ -5,17 +5,20 @@ func change_to(
 	fade_out: bool = true,
 	fade_out_time_sec: float = 1.0,
 	fade_in: bool = true,
-	fade_in_time_sec: float = 0.5,
+	fade_in_time_sec: float = 2.5,
 ):
 	if fade_out:
 		var rect = _create_fade_rect()
-		await FadeInOut.fade_out(rect, fade_out_time_sec)
+		rect.modulate.a = 0
+		await FadeInOut.fade_out(rect, fade_out_time_sec, Color.BLACK)
 
 	await _change_scene_to_packed_await(next_scene)
 
 	if fade_in:
 		var rect = _create_fade_rect()
-		await FadeInOut.fade_in(rect, fade_in_time_sec)
+		var final_color = Color.BLACK
+		final_color.a = 0
+		await FadeInOut.fade_in(rect, fade_in_time_sec, final_color)
 
 func _create_fade_rect() -> ColorRect:
 	var screen_size = get_tree().root.get_size_with_decorations()
@@ -23,7 +26,6 @@ func _create_fade_rect() -> ColorRect:
 	var rect = ColorRect.new()
 	rect.set_size(screen_size)
 	rect.modulate = Color.BLACK
-	rect.modulate.a = 0
 
 	get_tree().current_scene.add_child(rect)
 
