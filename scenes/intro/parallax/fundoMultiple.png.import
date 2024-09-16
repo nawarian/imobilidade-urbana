@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://snxq2iqclu2e"
-path="res://.godot/imported/trilhos.png-fd4492b520622586158d2ca12d7e4616.ctex"
+uid="uid://cpm41u45ykh0s"
+path="res://.godot/imported/fundoMultiple.png-62be1631844aa4a751e7a2b269c93692.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/intro/trilhos.png"
-dest_files=["res://.godot/imported/trilhos.png-fd4492b520622586158d2ca12d7e4616.ctex"]
+source_file="res://scenes/intro/parallax/fundoMultiple.png"
+dest_files=["res://.godot/imported/fundoMultiple.png-62be1631844aa4a751e7a2b269c93692.ctex"]
 
 [params]
 

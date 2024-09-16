@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dplsop75mo88k"
-path="res://.godot/imported/luaMultiple.png-e3fbc350275c0c8ddf57a1061a57b2fe.ctex"
+uid="uid://snxq2iqclu2e"
+path="res://.godot/imported/trilhos.png-53ee9a61a215853a0a87b76e939ed20d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/intro/luaMultiple.png"
-dest_files=["res://.godot/imported/luaMultiple.png-e3fbc350275c0c8ddf57a1061a57b2fe.ctex"]
+source_file="res://scenes/intro/parallax/trilhos.png"
+dest_files=["res://.godot/imported/trilhos.png-53ee9a61a215853a0a87b76e939ed20d.ctex"]
 
 [params]
 

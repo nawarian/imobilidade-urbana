@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5bal606534yf"
-path="res://.godot/imported/nuvensMultiple.png-cf3829dbceeb0c246cd235300bfd9f72.ctex"
+uid="uid://2dnr8rep8sre"
+path="res://.godot/imported/prediosMultiple.png-b60c9ed56bfca61fc292b14df44010a6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/intro/nuvensMultiple.png"
-dest_files=["res://.godot/imported/nuvensMultiple.png-cf3829dbceeb0c246cd235300bfd9f72.ctex"]
+source_file="res://scenes/intro/parallax/prediosMultiple.png"
+dest_files=["res://.godot/imported/prediosMultiple.png-b60c9ed56bfca61fc292b14df44010a6.ctex"]
 
 [params]
 

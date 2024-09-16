@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dowktwrocgw4b"
-path="res://.godot/imported/margem_oposta.png-4aedb72dd8133d2da9feeef7d1c49a38.ctex"
+uid="uid://dnlov4kcl7dl2"
+path="res://.godot/imported/fundo.png-f3350dd7882c66b818d2e1ef51e55259.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/intro/margem_oposta.png"
-dest_files=["res://.godot/imported/margem_oposta.png-4aedb72dd8133d2da9feeef7d1c49a38.ctex"]
+source_file="res://scenes/intro/parallax/fundo.png"
+dest_files=["res://.godot/imported/fundo.png-f3350dd7882c66b818d2e1ef51e55259.ctex"]
 
 [params]
 

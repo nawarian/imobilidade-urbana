@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2dnr8rep8sre"
-path="res://.godot/imported/prediosMultiple.png-2800192a0b9feb86fe1b2e2e496779fb.ctex"
+uid="uid://mhcrr72r2i3y"
+path="res://.godot/imported/predios.png-6d7b2a22ec8fb52627d694faf4d53989.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/intro/prediosMultiple.png"
-dest_files=["res://.godot/imported/prediosMultiple.png-2800192a0b9feb86fe1b2e2e496779fb.ctex"]
+source_file="res://scenes/intro/parallax/predios.png"
+dest_files=["res://.godot/imported/predios.png-6d7b2a22ec8fb52627d694faf4d53989.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2monfmkvche0"
-path="res://.godot/imported/brilho_luaMultiple.png-4a29da4206a343209677a57599d9acd7.ctex"
+uid="uid://b6uoj5jejwuj4"
+path="res://.godot/imported/nuvens.png-02e8ae53f5fccdb7ea4b18ae64628970.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/intro/brilho_luaMultiple.png"
-dest_files=["res://.godot/imported/brilho_luaMultiple.png-4a29da4206a343209677a57599d9acd7.ctex"]
+source_file="res://scenes/intro/parallax/nuvens.png"
+dest_files=["res://.godot/imported/nuvens.png-02e8ae53f5fccdb7ea4b18ae64628970.ctex"]
 
 [params]
 

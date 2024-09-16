@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dw23xcx5tcvmp"
-path="res://.godot/imported/train.png-54ef3d1000ca69fac24eeba40d1b9cb4.ctex"
+uid="uid://dplsop75mo88k"
+path="res://.godot/imported/luaMultiple.png-4d2f9eefd9993c48390907b9ac21347d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/intro/train.png"
-dest_files=["res://.godot/imported/train.png-54ef3d1000ca69fac24eeba40d1b9cb4.ctex"]
+source_file="res://scenes/intro/parallax/luaMultiple.png"
+dest_files=["res://.godot/imported/luaMultiple.png-4d2f9eefd9993c48390907b9ac21347d.ctex"]
 
 [params]
 

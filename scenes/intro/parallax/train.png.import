@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bds704qs2wsbe"
-path="res://.godot/imported/cascalho.png-543ed4f02dc67c902a3ef17ab1a97c8c.ctex"
+uid="uid://dw23xcx5tcvmp"
+path="res://.godot/imported/train.png-e88c67464bd08c2d01b75d9d6703b414.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/intro/cascalho.png"
-dest_files=["res://.godot/imported/cascalho.png-543ed4f02dc67c902a3ef17ab1a97c8c.ctex"]
+source_file="res://scenes/intro/parallax/train.png"
+dest_files=["res://.godot/imported/train.png-e88c67464bd08c2d01b75d9d6703b414.ctex"]
 
 [params]
 
