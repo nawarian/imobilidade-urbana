@@ -1,9 +1,12 @@
 extends Control
 
 @onready var intro_scene: PackedScene = preload("res://scenes/intro/intro.tscn")
+@onready var headphones_image: Resource = preload("res://scenes/mainmenu/logo-put-headphones.png")
 
+@onready var logo: TextureRect = $Logo
 @onready var bgm: AudioStreamPlayer2D = $bgm
 @onready var text_label: RichTextLabel = $PressAnyKey
+@onready var disclaimer_text_label: RichTextLabel = $Disclaimer
 
 func _ready():
 	bgm.volume_db = -20
@@ -26,4 +29,10 @@ func _blink(target: Node):
 
 func _process(delta):
 	if Input.is_action_just_released("ui_accept"):
-		SceneManager.change_to(intro_scene)
+		if logo.texture != headphones_image:
+			await FadeInOut.fade_out($".", 1)
+			logo.texture = headphones_image
+			disclaimer_text_label.text = "ui.put.headphones"
+			await FadeInOut.fade_in($".", 2, Color.WHITE)
+		else:
+			SceneManager.change_to(intro_scene)
