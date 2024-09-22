@@ -36,7 +36,7 @@ theme/custom_font="res://fonts/Silkscreen-Regular.ttf"
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://lang/translations.pt_BR.translation", "res://lang/translations.en.translation")
+locale/translations=PackedStringArray("res://lang/translations.en.translation", "res://lang/translations.pt_BR.translation")
 
 [rendering]
 

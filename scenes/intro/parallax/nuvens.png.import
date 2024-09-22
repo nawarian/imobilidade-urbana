@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dw23xcx5tcvmp"
-path="res://.godot/imported/train.png-54ef3d1000ca69fac24eeba40d1b9cb4.ctex"
+uid="uid://b6uoj5jejwuj4"
+path="res://.godot/imported/nuvens.png-02e8ae53f5fccdb7ea4b18ae64628970.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/intro/train.png"
-dest_files=["res://.godot/imported/train.png-54ef3d1000ca69fac24eeba40d1b9cb4.ctex"]
+source_file="res://scenes/intro/parallax/nuvens.png"
+dest_files=["res://.godot/imported/nuvens.png-02e8ae53f5fccdb7ea4b18ae64628970.ctex"]
 
 [params]
 

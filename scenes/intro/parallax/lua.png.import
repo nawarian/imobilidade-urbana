@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://kivnf60jden1"
-path="res://.godot/imported/brilho_lua.png-e17ea666697c5a758ebb220d44218100.ctex"
+uid="uid://fw6vglh7qdgp"
+path="res://.godot/imported/lua.png-f323cd7e883fcb68332555e317d91d09.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/intro/brilho_lua.png"
-dest_files=["res://.godot/imported/brilho_lua.png-e17ea666697c5a758ebb220d44218100.ctex"]
+source_file="res://scenes/intro/parallax/lua.png"
+dest_files=["res://.godot/imported/lua.png-f323cd7e883fcb68332555e317d91d09.ctex"]
 
 [params]
 

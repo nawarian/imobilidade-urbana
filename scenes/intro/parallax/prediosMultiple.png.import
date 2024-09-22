@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://gifsqe5ue1a1"
-path="res://.godot/imported/explosao R01-Sheet.png-54fc8ec68793b4042f0051181c4dd80d.ctex"
+uid="uid://2dnr8rep8sre"
+path="res://.godot/imported/prediosMultiple.png-b60c9ed56bfca61fc292b14df44010a6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/explosion/explosao R01-Sheet.png"
-dest_files=["res://.godot/imported/explosao R01-Sheet.png-54fc8ec68793b4042f0051181c4dd80d.ctex"]
+source_file="res://scenes/intro/parallax/prediosMultiple.png"
+dest_files=["res://.godot/imported/prediosMultiple.png-b60c9ed56bfca61fc292b14df44010a6.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfyp4tj0ncd1l"
-path="res://.godot/imported/ciclovia.png-250f617164c62a1fc33b24bb071b7ef7.ctex"
+uid="uid://dowktwrocgw4b"
+path="res://.godot/imported/margem_oposta.png-a11fe4389a5f5ff1b88881684dbcaa3b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/intro/ciclovia.png"
-dest_files=["res://.godot/imported/ciclovia.png-250f617164c62a1fc33b24bb071b7ef7.ctex"]
+source_file="res://scenes/intro/parallax/margem_oposta.png"
+dest_files=["res://.godot/imported/margem_oposta.png-a11fe4389a5f5ff1b88881684dbcaa3b.ctex"]
 
 [params]
 

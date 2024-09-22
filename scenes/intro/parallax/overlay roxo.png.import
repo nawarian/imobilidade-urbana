@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpm41u45ykh0s"
-path="res://.godot/imported/fundoMultiple.png-7cd80fe04dbfb5cd806fe9ef14363692.ctex"
+uid="uid://btui8gh5cpq2o"
+path="res://.godot/imported/overlay roxo.png-20707614e9d6502d98431ad54ba9ff39.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/intro/fundoMultiple.png"
-dest_files=["res://.godot/imported/fundoMultiple.png-7cd80fe04dbfb5cd806fe9ef14363692.ctex"]
+source_file="res://scenes/intro/parallax/overlay roxo.png"
+dest_files=["res://.godot/imported/overlay roxo.png-20707614e9d6502d98431ad54ba9ff39.ctex"]
 
 [params]
 

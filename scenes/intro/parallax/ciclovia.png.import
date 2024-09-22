@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fw6vglh7qdgp"
-path="res://.godot/imported/lua.png-40239d5221b5a561244a7a865dcfe539.ctex"
+uid="uid://cfyp4tj0ncd1l"
+path="res://.godot/imported/ciclovia.png-9dbe74a94578c1f73aed2c4f3dbbe9f8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/intro/lua.png"
-dest_files=["res://.godot/imported/lua.png-40239d5221b5a561244a7a865dcfe539.ctex"]
+source_file="res://scenes/intro/parallax/ciclovia.png"
+dest_files=["res://.godot/imported/ciclovia.png-9dbe74a94578c1f73aed2c4f3dbbe9f8.ctex"]
 
 [params]
 

@@ -1,6 +1,625 @@
-[gd_scene load_steps=2 format=3 uid="uid://b6ty6ioxqkwxm"]
+[gd_scene load_steps=57 format=3 uid="uid://b6ty6ioxqkwxm"]
 
-[ext_resource type="Script" path="res://scenes/intro/intro.gd" id="1_ttoj4"]
+[ext_resource type="Script" path="res://scenes/intro/intro.gd" id="1_2hhlr"]
+[ext_resource type="Texture2D" uid="uid://dnlov4kcl7dl2" path="res://scenes/intro/parallax/fundo.png" id="2_qbncr"]
+[ext_resource type="Texture2D" uid="uid://mhcrr72r2i3y" path="res://scenes/intro/parallax/predios.png" id="3_eugmg"]
+[ext_resource type="Texture2D" uid="uid://dw23xcx5tcvmp" path="res://scenes/intro/parallax/train.png" id="3_qw5o6"]
+[ext_resource type="Texture2D" uid="uid://fw6vglh7qdgp" path="res://scenes/intro/parallax/lua.png" id="4_i3uoi"]
+[ext_resource type="Texture2D" uid="uid://b6uoj5jejwuj4" path="res://scenes/intro/parallax/nuvens.png" id="4_wbtre"]
+[ext_resource type="Texture2D" uid="uid://dowktwrocgw4b" path="res://scenes/intro/parallax/margem_oposta.png" id="5_l6ikx"]
+[ext_resource type="Texture2D" uid="uid://ciprbkukhhhjt" path="res://scenes/intro/parallax/rio.png" id="7_eup0l"]
+[ext_resource type="Texture2D" uid="uid://cfyp4tj0ncd1l" path="res://scenes/intro/parallax/ciclovia.png" id="7_q0hfg"]
+[ext_resource type="Texture2D" uid="uid://dfpea2ans8k7y" path="res://scenes/intro/parallax/arbustos.png" id="7_ttik3"]
+[ext_resource type="Texture2D" uid="uid://bds704qs2wsbe" path="res://scenes/intro/parallax/cascalho.png" id="8_fdl5a"]
+[ext_resource type="Texture2D" uid="uid://snxq2iqclu2e" path="res://scenes/intro/parallax/trilhos.png" id="11_vvfig"]
+[ext_resource type="Script" path="res://scenes/intro/train.gd" id="13_gi03u"]
+[ext_resource type="AudioStream" uid="uid://0kriutse3eiv" path="res://scenes/intro/intro-train-music.mp3" id="13_tdmau"]
+[ext_resource type="Texture2D" uid="uid://gifsqe5ue1a1" path="res://scenes/intro/explosion.png" id="15_fflxr"]
+[ext_resource type="AudioStream" uid="uid://b73qi78ell4r3" path="res://scenes/intro/sfx_explosao_trem_ind_1.mp3" id="16_avcr6"]
+[ext_resource type="AudioStream" uid="uid://bjntmw541qyqm" path="res://scenes/intro/sfx_explosao_trem_ind_2.mp3" id="17_pko4u"]
+[ext_resource type="AudioStream" uid="uid://bhb28xukcouh1" path="res://scenes/intro/sfx_explosao_trem_ind_3.mp3" id="18_v2sus"]
+
+[sub_resource type="Animation" id="Animation_b1g0v"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ParallaxBackground/TextOverlay/Control/RichTextLabel:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [""]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ParallaxBackground/TextOverlay/Control:modulate:a")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Train/Camera2D/bgm:volume_db")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-22.486]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Train/Explosion01:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Train/Explosion02:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Train/Explosion03:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Train/Explosion04:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Train:train_speed")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [999.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Train:self_modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_t7ijq"]
+resource_name = "train_intro"
+length = 24.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ParallaxBackground/TextOverlay/Control/RichTextLabel:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 6.51, 13.51),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": ["intro.text.0", "intro.text.1", "intro.text.2"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ParallaxBackground/TextOverlay/Control:modulate:a")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(3, 3.53333, 6, 6.5, 7, 13, 13.5, 14, 16.5, 17),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Train/Camera2D/bgm")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("13_tdmau")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/2/use_blend = false
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Train/Camera2D/bgm:volume_db")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.93333, 22.1, 24),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [-22.486, 0.0, 0.0, -22.486]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Train/Explosion01:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 16.6, 17, 18.9, 19),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, false, true, true, false]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Train/Explosion01")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(17),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"default"],
+"method": &"play"
+}]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Train/Explosion02:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 18, 18.1333, 19.9667, 20.1333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, false, true, true, false]
+}
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Train/Explosion02")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(18.1333),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"default"],
+"method": &"play"
+}]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Train/Explosion03:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 19.2, 19.333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/9/type = "method"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Train/Explosion03")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(19.3667),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"default"],
+"method": &"play"
+}]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Train/Explosion04:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 20.4333, 20.5663),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/11/type = "method"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Train/Explosion04")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(20.5667),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"default"],
+"method": &"play"
+}]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Train:train_speed")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 17, 18.133, 19.133, 20.5667, 22.5667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [999.0, 999.0, 850.0, 650.0, 400.0, 0.0]
+}
+tracks/13/type = "method"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Train/Explosion01/SfxExplosion01")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(17),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/14/type = "method"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Train/Explosion02/SfxExplosion02")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(18.1333),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/15/type = "method"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Train/Explosion03/SfxExplosion03")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(19.3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/16/type = "method"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Train/Explosion04/SfxExplosion04")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(20.5667),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Train:self_modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(16.7667, 16.9667, 17.2, 17.3667, 17.9333, 18.1333, 18.3667, 18.5333, 19.0667, 19.2667, 19.4667, 19.6333, 20.4, 20.6, 20.8, 20.9667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0.08, 0.08, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 0.08, 0.08, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 0.08, 0.08, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 0.08, 0.08, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a48ru"]
+_data = {
+"RESET": SubResource("Animation_b1g0v"),
+"train_intro": SubResource("Animation_t7ijq")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n31ij"]
+atlas = ExtResource("15_fflxr")
+region = Rect2(0, 0, 360, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sb8np"]
+atlas = ExtResource("15_fflxr")
+region = Rect2(360, 0, 360, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t3jif"]
+atlas = ExtResource("15_fflxr")
+region = Rect2(720, 0, 360, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o74ug"]
+atlas = ExtResource("15_fflxr")
+region = Rect2(1080, 0, 360, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_reg5t"]
+atlas = ExtResource("15_fflxr")
+region = Rect2(1440, 0, 360, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_28bu0"]
+atlas = ExtResource("15_fflxr")
+region = Rect2(1800, 0, 360, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hq2tt"]
+atlas = ExtResource("15_fflxr")
+region = Rect2(2160, 0, 360, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_87ce4"]
+atlas = ExtResource("15_fflxr")
+region = Rect2(2520, 0, 360, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_liu81"]
+atlas = ExtResource("15_fflxr")
+region = Rect2(2880, 0, 360, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1k7kv"]
+atlas = ExtResource("15_fflxr")
+region = Rect2(3240, 0, 360, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gkoeo"]
+atlas = ExtResource("15_fflxr")
+region = Rect2(3600, 0, 360, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mbggd"]
+atlas = ExtResource("15_fflxr")
+region = Rect2(3960, 0, 360, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5qc58"]
+atlas = ExtResource("15_fflxr")
+region = Rect2(4320, 0, 360, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nnxod"]
+atlas = ExtResource("15_fflxr")
+region = Rect2(4680, 0, 360, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gpryk"]
+atlas = ExtResource("15_fflxr")
+region = Rect2(5040, 0, 360, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5hom0"]
+atlas = ExtResource("15_fflxr")
+region = Rect2(5400, 0, 360, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_miy1c"]
+atlas = ExtResource("15_fflxr")
+region = Rect2(5760, 0, 360, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1d1c5"]
+atlas = ExtResource("15_fflxr")
+region = Rect2(6120, 0, 360, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cg1ve"]
+atlas = ExtResource("15_fflxr")
+region = Rect2(6480, 0, 360, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i4rgk"]
+atlas = ExtResource("15_fflxr")
+region = Rect2(6840, 0, 360, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xs2si"]
+atlas = ExtResource("15_fflxr")
+region = Rect2(7200, 0, 360, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gwp6p"]
+atlas = ExtResource("15_fflxr")
+region = Rect2(7560, 0, 360, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ceunl"]
+atlas = ExtResource("15_fflxr")
+region = Rect2(7920, 0, 360, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5rx3c"]
+atlas = ExtResource("15_fflxr")
+region = Rect2(8280, 0, 360, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pgo8m"]
+atlas = ExtResource("15_fflxr")
+region = Rect2(8640, 0, 360, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g5ms3"]
+atlas = ExtResource("15_fflxr")
+region = Rect2(9000, 0, 360, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j816p"]
+atlas = ExtResource("15_fflxr")
+region = Rect2(9360, 0, 360, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_idsfp"]
+atlas = ExtResource("15_fflxr")
+region = Rect2(9720, 0, 360, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uexwp"]
+atlas = ExtResource("15_fflxr")
+region = Rect2(10080, 0, 360, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vqcfg"]
+atlas = ExtResource("15_fflxr")
+region = Rect2(10440, 0, 360, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_63uk6"]
+atlas = ExtResource("15_fflxr")
+region = Rect2(10800, 0, 360, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s1vgc"]
+atlas = ExtResource("15_fflxr")
+region = Rect2(11160, 0, 360, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_71wp6"]
+atlas = ExtResource("15_fflxr")
+region = Rect2(11520, 0, 360, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_42l7x"]
+atlas = ExtResource("15_fflxr")
+region = Rect2(11880, 0, 360, 360)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ww7c4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n31ij")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sb8np")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t3jif")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o74ug")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_reg5t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_28bu0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hq2tt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_87ce4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_liu81")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1k7kv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gkoeo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mbggd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5qc58")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nnxod")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gpryk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5hom0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_miy1c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1d1c5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cg1ve")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i4rgk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xs2si")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gwp6p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ceunl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5rx3c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pgo8m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g5ms3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j816p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_idsfp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uexwp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vqcfg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_63uk6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s1vgc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_71wp6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_42l7x")
+}],
+"loop": false,
+"name": &"default",
+"speed": 20.0
+}]
 
 [node name="Intro" type="Control"]
 layout_mode = 3
@@ -9,36 +628,183 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_ttoj4")
+script = ExtResource("1_2hhlr")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -52.0
-offset_top = -20.0
-offset_right = 52.0
-offset_bottom = 20.0
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Fundo" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 0)
+motion_mirroring = Vector2(1280, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Fundo"]
+position = Vector2(640, 360)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("2_qbncr")
+
+[node name="Lua" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.01, 0.01)
+motion_mirroring = Vector2(1280, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Lua"]
+position = Vector2(840, 360)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("4_i3uoi")
+
+[node name="Nuvens" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.3, 0.3)
+motion_mirroring = Vector2(1280, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Nuvens"]
+position = Vector2(640, 360)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("4_wbtre")
+
+[node name="Predios" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.4, 0.4)
+motion_mirroring = Vector2(1280, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Predios"]
+position = Vector2(640, 360)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("3_eugmg")
+
+[node name="Margem" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.4, 0.4)
+motion_mirroring = Vector2(1280, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Margem"]
+position = Vector2(640, 360)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("5_l6ikx")
+
+[node name="Rio" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(1280, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Rio"]
+position = Vector2(640, 360)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("7_eup0l")
+
+[node name="Arbustos" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.6, 0.6)
+motion_mirroring = Vector2(1280, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Arbustos"]
+position = Vector2(640, 360)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("7_ttik3")
+
+[node name="Ciclovia" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.6, 0.6)
+motion_mirroring = Vector2(1280, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Ciclovia"]
+position = Vector2(640, 360)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("7_q0hfg")
+
+[node name="Cascalho" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.8, 0.8)
+motion_mirroring = Vector2(1280, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Cascalho"]
+position = Vector2(640, 360)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("8_fdl5a")
+
+[node name="Trilhos" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.8, 0.8)
+motion_mirroring = Vector2(1280, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Trilhos"]
+position = Vector2(640, 360)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("11_vvfig")
+
+[node name="TextOverlay" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 0)
+
+[node name="TrainIntro" type="AnimationPlayer" parent="ParallaxBackground/TextOverlay"]
+root_node = NodePath("../../..")
+libraries = {
+"": SubResource("AnimationLibrary_a48ru")
+}
+
+[node name="Control" type="Control" parent="ParallaxBackground/TextOverlay"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-bbcode_enabled = true
-text = "[center]Intro screen[/center]"
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -88.0
-offset_top = 20.0
-offset_right = 88.0
-offset_bottom = 72.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="ColorRect" type="ColorRect" parent="ParallaxBackground/TextOverlay/Control"]
+modulate = Color(1, 1, 1, 0.470588)
+layout_mode = 0
+offset_left = -552.0
+offset_top = 128.0
+offset_right = 1832.0
+offset_bottom = 320.0
+color = Color(0, 0, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ParallaxBackground/TextOverlay/Control"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 152.0
+offset_right = 1216.0
+offset_bottom = 320.0
+theme_override_font_sizes/normal_font_size = 34
 bbcode_enabled = true
-text = "[center]Pressione ESPAÇO para gameplay[/center]"
+
+[node name="Train" type="Sprite2D" parent="."]
+position = Vector2(-680, 492)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("3_qw5o6")
+hframes = 3
+vframes = 3
+frame = 2
+script = ExtResource("13_gi03u")
+
+[node name="Camera2D" type="Camera2D" parent="Train"]
+offset = Vector2(550, -130)
+limit_left = 0
+limit_top = 0
+
+[node name="bgm" type="AudioStreamPlayer2D" parent="Train/Camera2D"]
+position = Vector2(1046.15, -756.923)
+scale = Vector2(1.53846, 1.53846)
+volume_db = -22.486
+bus = &"bgm"
+
+[node name="Explosion01" type="AnimatedSprite2D" parent="Train"]
+visible = false
+position = Vector2(1156.92, -92.3077)
+sprite_frames = SubResource("SpriteFrames_ww7c4")
+
+[node name="SfxExplosion01" type="AudioStreamPlayer2D" parent="Train/Explosion01"]
+stream = ExtResource("16_avcr6")
+
+[node name="Explosion02" type="AnimatedSprite2D" parent="Train"]
+visible = false
+position = Vector2(516.923, -30.7692)
+sprite_frames = SubResource("SpriteFrames_ww7c4")
+
+[node name="SfxExplosion02" type="AudioStreamPlayer2D" parent="Train/Explosion02"]
+stream = ExtResource("17_pko4u")
+
+[node name="Explosion03" type="AnimatedSprite2D" parent="Train"]
+visible = false
+position = Vector2(209.231, -116.923)
+sprite_frames = SubResource("SpriteFrames_ww7c4")
+
+[node name="SfxExplosion03" type="AudioStreamPlayer2D" parent="Train/Explosion03"]
+stream = ExtResource("18_v2sus")
+
+[node name="Explosion04" type="AnimatedSprite2D" parent="Train"]
+visible = false
+position = Vector2(750.769, -166.154)
+sprite_frames = SubResource("SpriteFrames_ww7c4")
+
+[node name="SfxExplosion04" type="AudioStreamPlayer2D" parent="Train/Explosion04"]
+stream = ExtResource("16_avcr6")

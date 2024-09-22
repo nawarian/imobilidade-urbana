@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://btui8gh5cpq2o"
-path="res://.godot/imported/overlay roxo.png-5b194038915c7695d583608dd1e9b04a.ctex"
+uid="uid://bds704qs2wsbe"
+path="res://.godot/imported/cascalho.png-524ca421a81c200ea18dbea033b47f14.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/intro/overlay roxo.png"
-dest_files=["res://.godot/imported/overlay roxo.png-5b194038915c7695d583608dd1e9b04a.ctex"]
+source_file="res://scenes/intro/parallax/cascalho.png"
+dest_files=["res://.godot/imported/cascalho.png-524ca421a81c200ea18dbea033b47f14.ctex"]
 
 [params]
 

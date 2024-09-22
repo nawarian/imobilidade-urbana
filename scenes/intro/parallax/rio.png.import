@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnlov4kcl7dl2"
-path="res://.godot/imported/fundo.png-134ddf2b31e800ed976415fd46189c2d.ctex"
+uid="uid://ciprbkukhhhjt"
+path="res://.godot/imported/rio.png-6ce7ce6d7c44d95ebdcecf9efccc6430.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/intro/fundo.png"
-dest_files=["res://.godot/imported/fundo.png-134ddf2b31e800ed976415fd46189c2d.ctex"]
+source_file="res://scenes/intro/parallax/rio.png"
+dest_files=["res://.godot/imported/rio.png-6ce7ce6d7c44d95ebdcecf9efccc6430.ctex"]
 
 [params]
 

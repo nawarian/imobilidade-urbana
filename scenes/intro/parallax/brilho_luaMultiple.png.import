@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mhcrr72r2i3y"
-path="res://.godot/imported/predios.png-cb1815134437968beacf83bdcec33879.ctex"
+uid="uid://d2monfmkvche0"
+path="res://.godot/imported/brilho_luaMultiple.png-cd11f17deaf78ce5a26155bef15a4886.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/intro/predios.png"
-dest_files=["res://.godot/imported/predios.png-cb1815134437968beacf83bdcec33879.ctex"]
+source_file="res://scenes/intro/parallax/brilho_luaMultiple.png"
+dest_files=["res://.godot/imported/brilho_luaMultiple.png-cd11f17deaf78ce5a26155bef15a4886.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2monfmkvche0"
-path="res://.godot/imported/brilho_luaMultiple.png-4a29da4206a343209677a57599d9acd7.ctex"
+uid="uid://dw23xcx5tcvmp"
+path="res://.godot/imported/train.png-e88c67464bd08c2d01b75d9d6703b414.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/intro/brilho_luaMultiple.png"
-dest_files=["res://.godot/imported/brilho_luaMultiple.png-4a29da4206a343209677a57599d9acd7.ctex"]
+source_file="res://scenes/intro/parallax/train.png"
+dest_files=["res://.godot/imported/train.png-e88c67464bd08c2d01b75d9d6703b414.ctex"]
 
 [params]
 
