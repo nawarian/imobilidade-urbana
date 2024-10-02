@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bkhs6kpf2s6f1"]
+[gd_scene load_steps=3 format=3 uid="uid://bkhs6kpf2s6f1"]
 
 [ext_resource type="Script" path="res://scenes/gameplay/gameplay.gd" id="1_ucw6m"]
+[ext_resource type="PackedScene" uid="uid://dbs74koy7yeq3" path="res://systems/dialogue/dialogue_container.tscn" id="2_2b7w2"]
 
 [node name="Gameplay" type="Control"]
 layout_mode = 3
@@ -74,3 +75,17 @@ grow_horizontal = 2
 grow_vertical = 2
 bbcode_enabled = true
 text = "[center]Pressione RIGHT para outro[/center]"
+
+[node name="DialogueContainer" parent="." instance=ExtResource("2_2b7w2")]
+visible = false
+layout_mode = 0
+offset_left = 16.0
+offset_top = 488.0
+offset_right = 1264.0
+offset_bottom = 704.0
+
+[node name="AnnouncementsPlayer" type="AudioStreamPlayer2D" parent="."]
+bus = &"sfx"
+
+[connection signal="dialogue_finished" from="DialogueContainer" to="." method="_on_dialogue_container_dialogue_finished"]
+[connection signal="next_sentence" from="DialogueContainer" to="." method="_on_dialogue_container_next_sentence"]

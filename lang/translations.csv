@@ -4,4 +4,8 @@ ID,pt_BR,en
 "intro.text.0","[center]São Paulo, numa noite qualquer...[/center]","[center]São Paulo, any other night[/center]"
 "intro.text.1","[center]Enquanto uma parte da população dorme, outra volta pra casa no trenzão que rasga o silêncio da noite[/center]","[center]While a some citizens sleep, another returns to their homes in the train that cuts the silence of the night[/center]"
 "intro.text.2","[center]Até que...[/center]","[center]Until...[/center]"
+"intro.monolog.0.speaker", "Glória", "Gloria"
+"intro.monolog.0.text", "Ué... não acredito que essa porcaria de trem vai parar logo agora!", "I can't believe this train will stop now!"
+"intro.monolog.1.speaker", "Anunciante", "Announcer"
+"intro.monolog.1.text", "Atenção passageiros! Devido a uma falha técnica, o trem não seguirá viagem. Pedimos a todos que saiam o mais rápido possível. Vocês correrão risco de vida se continuarem dentro do trem. Nossas atividades estão com previsão de retorno no período da manhã.", "Attention passengers! Due to a technical fault this train won't continue on. Please leave the train as quick as possible. Your life is endangered as long as you continue on the train. Our activities are expected to return in the morning."
 

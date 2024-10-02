@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=3 uid="uid://dbs74koy7yeq3"]
+
+[ext_resource type="Texture2D" uid="uid://01b6hru1p516" path="res://systems/dialogue/avatars/retrato_anunciante.png" id="1_4k6ri"]
+[ext_resource type="Script" path="res://systems/dialogue/dialogue.gd" id="1_4t301"]
+[ext_resource type="Texture2D" uid="uid://c0mnxpimqtwub" path="res://systems/dialogue/icons/seta_fim_balao_fala.png" id="2_5sj47"]
+[ext_resource type="AudioStream" uid="uid://cjeuvqu8ipxmj" path="res://systems/dialogue/sfx_tick.mp3" id="4_k3s5r"]
+
+[sub_resource type="Theme" id="Theme_nd2gr"]
+MarginContainer/constants/margin_bottom = 40
+MarginContainer/constants/margin_left = 40
+MarginContainer/constants/margin_right = 40
+MarginContainer/constants/margin_top = 40
+RichTextLabel/font_sizes/normal_font_size = 20
+
+[node name="DialogueContainer" type="ColorRect"]
+offset_right = 1280.0
+offset_bottom = 216.0
+color = Color(0.118581, 0.118581, 0.118581, 0.952941)
+script = ExtResource("1_4t301")
+
+[node name="AvatarContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1032.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_nd2gr")
+
+[node name="TextureRect" type="TextureRect" parent="AvatarContainer"]
+layout_mode = 2
+texture = ExtResource("1_4k6ri")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="TextContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 216.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_nd2gr")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TextContainer"]
+layout_mode = 2
+text = "intro.monolog.1.text"
+
+[node name="TextArrow" type="TextureRect" parent="TextContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+texture = ExtResource("2_5sj47")
+stretch_mode = 2
+
+[node name="CharacterTickSfx" type="AudioStreamPlayer2D" parent="TextContainer"]
+stream = ExtResource("4_k3s5r")
+bus = &"sfx"

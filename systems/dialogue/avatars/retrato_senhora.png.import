@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cuh7mlvyfpoia"
-path="res://.godot/imported/retrato_player.png-9bce93a93db23ae78f4c0bea7a7f79ac.ctex"
+uid="uid://h6wxw8pfndvc"
+path="res://.godot/imported/retrato_senhora.png-548ef2f876b928c9d2b1555aeaec309a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/retrato_player.png"
-dest_files=["res://.godot/imported/retrato_player.png-9bce93a93db23ae78f4c0bea7a7f79ac.ctex"]
+source_file="res://systems/dialogue/avatars/retrato_senhora.png"
+dest_files=["res://.godot/imported/retrato_senhora.png-548ef2f876b928c9d2b1555aeaec309a.ctex"]
 
 [params]
 
