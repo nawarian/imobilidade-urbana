@@ -9,6 +9,8 @@ signal dialogue_finished
 @export var total_messages: int
 
 @onready var label: RichTextLabel = $TextContainer/RichTextLabel
+@onready var avatar_label: RichTextLabel = $AvatarContainer/Control/AvatarName
+@onready var avatar_rect: TextureRect = $AvatarContainer/AvatarImage
 @onready var tick_sfx: AudioStreamPlayer2D = $TextContainer/CharacterTickSfx
 
 var tween: Tween
@@ -51,9 +53,14 @@ func next_line():
 
 	var label_text = "%s.%d.text" % [dialogue_prefix_key, current_line]
 	var speaker_text = "%s.%d.speaker" % [dialogue_prefix_key, current_line]
+	var avatar_img = load("res://systems/dialogue/avatars/%s" % [
+		TranslationServer.translate("%s.%d.avatar" % [dialogue_prefix_key, current_line]).trim_prefix(" ")
+	])
 
 	emit_signal("next_sentence", label_text, speaker_text, current_line)
 	label.text = label_text
+	avatar_label.text = "[center]%s[/center]" % [TranslationServer.translate(speaker_text)]
+	avatar_rect.texture = avatar_img    
 	label.visible_ratio = 0
 
 	sfx_tween = create_tween()
