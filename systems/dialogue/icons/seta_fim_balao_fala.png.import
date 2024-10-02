@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c0mnxpimqtwub"
-path="res://.godot/imported/seta_fim_balao_fala.png-4f1fbfc89d6d3213d25f4867b5662060.ctex"
+path="res://.godot/imported/seta_fim_balao_fala.png-fcda82d35ebe7ac101b1e33bc0757dbe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/seta_fim_balao_fala.png"
-dest_files=["res://.godot/imported/seta_fim_balao_fala.png-4f1fbfc89d6d3213d25f4867b5662060.ctex"]
+source_file="res://systems/dialogue/icons/seta_fim_balao_fala.png"
+dest_files=["res://.godot/imported/seta_fim_balao_fala.png-fcda82d35ebe7ac101b1e33bc0757dbe.ctex"]
 
 [params]
 

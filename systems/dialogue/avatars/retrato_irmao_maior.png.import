@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://01b6hru1p516"
-path="res://.godot/imported/retrato_anunciante.png-cf42d8c449d8b86c1af4dc5f4b423f07.ctex"
+uid="uid://v4gdn0jljyin"
+path="res://.godot/imported/retrato_irmao_maior.png-d979d690244e2b45351b8fc3dc16c97e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/retrato_anunciante.png"
-dest_files=["res://.godot/imported/retrato_anunciante.png-cf42d8c449d8b86c1af4dc5f4b423f07.ctex"]
+source_file="res://systems/dialogue/avatars/retrato_irmao_maior.png"
+dest_files=["res://.godot/imported/retrato_irmao_maior.png-d979d690244e2b45351b8fc3dc16c97e.ctex"]
 
 [params]
 
