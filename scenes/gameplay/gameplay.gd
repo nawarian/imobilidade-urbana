@@ -11,14 +11,6 @@ func _ready():
 	dialogue_container.visible = true
 	dialogue_container.start("intro.monolog", 2)
 
-func _process(delta):
-	if Input.is_action_just_released("ui_left"):
-		SceneManager.change_to(gameover_scene)
-	if Input.is_action_just_released("ui_up"):
-		SceneManager.change_to(jumpscare_scene)
-	if Input.is_action_just_released("ui_right"):
-		SceneManager.change_to(outro_scene)
-
 func _on_dialogue_container_next_sentence(text_label, speaker, index):
 	if index == 1:
 		announcements_player.stream = load("res://scenes/gameplay/announcements/sfx_trem_aviso_sonoro_anunciante_0.mp3")
